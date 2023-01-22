@@ -1,30 +1,46 @@
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<div>
+  <Header />
+    <RouterView />
+</div>
+
+
 </template>
 
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import Header from './components/Header.vue'
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+.container {
+  max-width: calc(1440px - 130px);
+  padding: 0 20px;
+  width: 100%;
+  margin: auto;
 }
 
-nav {
-  padding: 30px;
+.btn{
+  background: transparent;
+  border: none;
+  transition: .3s;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+img{
+  width: 100%;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+span.icon{
+  display: flex;
+  align-items: center;
 }
+
 </style>
